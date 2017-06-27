@@ -1,0 +1,165 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 32744 bytes for ChunkPool::allocate
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:273), pid=1672, tid=0x0000000000002330
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_111-b14) (build 1.8.0_111-b14)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.111-b14 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000014787800):  JavaThread "C1 CompilerThread2" daemon [_thread_in_vm, id=9008, stack(0x0000000015fe0000,0x00000000160e0000)]
+
+Stack: [0x0000000015fe0000,0x00000000160e0000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x000000001610b800 JavaThread "Service Thread" daemon [_thread_blocked, id=6728, stack(0x00000000164e0000,0x00000000165e0000)]
+=>0x0000000014787800 JavaThread "C1 CompilerThread2" daemon [_thread_in_vm, id=9008, stack(0x0000000015fe0000,0x00000000160e0000)]
+  0x0000000014789800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=11024, stack(0x0000000015ee0000,0x0000000015fe0000)]
+  0x0000000014783800 JavaThread "C2 CompilerThread0" daemon [_thread_in_vm, id=10896, stack(0x0000000015de0000,0x0000000015ee0000)]
+  0x0000000014782000 JavaThread "Attach Listener" daemon [_thread_blocked, id=10752, stack(0x0000000015ce0000,0x0000000015de0000)]
+  0x000000001476d800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=10840, stack(0x0000000015be0000,0x0000000015ce0000)]
+  0x000000001476a000 JavaThread "Finalizer" daemon [_thread_blocked, id=6372, stack(0x00000000159d0000,0x0000000015ad0000)]
+  0x00000000023b4000 JavaThread "Reference Handler" daemon [_thread_blocked, id=2628, stack(0x00000000158d0000,0x00000000159d0000)]
+  0x00000000022c4000 JavaThread "main" [_thread_in_native, id=10408, stack(0x00000000021c0000,0x00000000022c0000)]
+
+Other Threads:
+  0x0000000014747000 VMThread [stack: 0x00000000157d0000,0x00000000158d0000] [id=10428]
+  0x0000000016130000 WatcherThread [stack: 0x00000000166f0000,0x00000000167f0000] [id=10488]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 17920K, used 921K [0x00000000ec700000, 0x00000000edb00000, 0x0000000100000000)
+  eden space 15360K, 6% used [0x00000000ec700000,0x00000000ec7e6738,0x00000000ed600000)
+  from space 2560K, 0% used [0x00000000ed880000,0x00000000ed880000,0x00000000edb00000)
+  to   space 2560K, 0% used [0x00000000ed600000,0x00000000ed600000,0x00000000ed880000)
+ ParOldGen       total 40960K, used 0K [0x00000000c5400000, 0x00000000c7c00000, 0x00000000ec700000)
+  object space 40960K, 0% used [0x00000000c5400000,0x00000000c5400000,0x00000000c7c00000)
+ Metaspace       used 2531K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 286K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x0000000011780000,0x0000000011960000] byte_map_base: 0x0000000011156000
+
+Marking Bits: (ParMarkBitMap*) 0x000000006662a6c0
+ Begin Bits: [0x0000000011ea0000, 0x0000000012d50000)
+ End Bits:   [0x0000000012d50000, 0x0000000013c00000)
+
+Polling page: 0x00000000001f0000
+
+CodeCache: size=245760Kb used=1054Kb max_used=1054Kb free=244705Kb
+ bounds [0x00000000023c0000, 0x0000000002630000, 0x00000000113c0000]
+ total_blobs=208 nmethods=1 adapters=147
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (2 events):
+Event: 0.161 Thread 0x00000000022c4000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x00000000ec707c78) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u111\7883\hotspot\
+Event: 0.161 Thread 0x00000000022c4000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x00000000ec707f60) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u111\7883\hotspot\src\share\vm\prims
+
+Events (10 events):
+Event: 0.239 loading class java/util/HashMap$EntryIterator
+Event: 0.239 loading class java/util/HashMap$HashIterator
+Event: 0.239 loading class java/util/HashMap$HashIterator done
+Event: 0.239 loading class java/util/HashMap$EntryIterator done
+Event: 0.239 loading class java/lang/ProcessEnvironment$CheckedEntry
+Event: 0.239 loading class java/lang/ProcessEnvironment$CheckedEntry done
+Event: 0.239 loading class java/util/TreeMap$Entry
+Event: 0.239 loading class java/util/TreeMap$Entry done
+Event: 0.239 loading class sun/usagetracker/UsageTrackerClient$3
+Event: 0.239 loading class sun/usagetracker/UsageTrackerClient$3 done
+
+
+Dynamic libraries:
+0x00007ff75b910000 - 0x00007ff75b947000 	C:\Program Files\Java\jre1.8.0_111\bin\javaw.exe
+0x00007ffccc560000 - 0x00007ffccc721000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffccc4b0000 - 0x00007ffccc55d000 	C:\WINDOWS\system32\KERNEL32.DLL
+0x00007ffcc96a0000 - 0x00007ffcc9888000 	C:\WINDOWS\system32\KERNELBASE.dll
+0x00007ffcca200000 - 0x00007ffcca2a7000 	C:\WINDOWS\system32\ADVAPI32.dll
+0x00007ffcc9ec0000 - 0x00007ffcc9f5d000 	C:\WINDOWS\system32\msvcrt.dll
+0x00007ffcc9a30000 - 0x00007ffcc9a8b000 	C:\WINDOWS\system32\sechost.dll
+0x00007ffccbca0000 - 0x00007ffccbdbc000 	C:\WINDOWS\system32\RPCRT4.dll
+0x00007ffcca2d0000 - 0x00007ffcca426000 	C:\WINDOWS\system32\USER32.dll
+0x00007ffcca070000 - 0x00007ffcca1f6000 	C:\WINDOWS\system32\GDI32.dll
+0x00007ffcc4770000 - 0x00007ffcc49e4000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.10586.0_none_8c15ae12515e1c22\COMCTL32.dll
+0x00007ffccc230000 - 0x00007ffccc4ad000 	C:\WINDOWS\system32\combase.dll
+0x00007ffcc8c10000 - 0x00007ffcc8c7a000 	C:\WINDOWS\system32\bcryptPrimitives.dll
+0x00007ffccbfe0000 - 0x00007ffccc01b000 	C:\WINDOWS\system32\IMM32.DLL
+0x00000000666b0000 - 0x0000000066782000 	C:\Program Files\Java\jre1.8.0_111\bin\msvcr100.dll
+0x0000000065e10000 - 0x00000000666aa000 	C:\Program Files\Java\jre1.8.0_111\bin\server\jvm.dll
+0x00007ffcb9600000 - 0x00007ffcb9609000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffcc7330000 - 0x00007ffcc7353000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffcc52a0000 - 0x00007ffcc52aa000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffccc100000 - 0x00007ffccc16b000 	C:\WINDOWS\system32\WS2_32.dll
+0x00007ffcc72d0000 - 0x00007ffcc72fc000 	C:\WINDOWS\SYSTEM32\WINMMBASE.dll
+0x00007ffcc95f0000 - 0x00007ffcc9633000 	C:\WINDOWS\system32\cfgmgr32.dll
+0x00007ffccc0f0000 - 0x00007ffccc0f8000 	C:\WINDOWS\system32\PSAPI.DLL
+0x0000000065e00000 - 0x0000000065e0f000 	C:\Program Files\Java\jre1.8.0_111\bin\verify.dll
+0x0000000065dd0000 - 0x0000000065df9000 	C:\Program Files\Java\jre1.8.0_111\bin\java.dll
+0x0000000065db0000 - 0x0000000065dc6000 	C:\Program Files\Java\jre1.8.0_111\bin\zip.dll
+0x00007ffcca430000 - 0x00007ffccb98c000 	C:\WINDOWS\system32\SHELL32.dll
+0x00007ffcc8c80000 - 0x00007ffcc92c5000 	C:\WINDOWS\system32\windows.storage.dll
+0x00007ffccc1d0000 - 0x00007ffccc222000 	C:\WINDOWS\system32\shlwapi.dll
+0x00007ffcc8c00000 - 0x00007ffcc8c0f000 	C:\WINDOWS\system32\kernel.appcore.dll
+0x00007ffcc92d0000 - 0x00007ffcc9385000 	C:\WINDOWS\system32\shcore.dll
+0x00007ffcc8b80000 - 0x00007ffcc8bcb000 	C:\WINDOWS\system32\powrprof.dll
+0x00007ffcc8bd0000 - 0x00007ffcc8be4000 	C:\WINDOWS\system32\profapi.dll
+
+VM Arguments:
+java_command: com.google.appengine.tools.enhancer.Enhance C:\Users\Sarah Weimer\workspace\ProjectplanTest\war\WEB-INF\classes\de\hdm\projectplan\client\editor\NewProjectView.class C:\Users\Sarah Weimer\workspace\ProjectplanTest\war\WEB-INF\classes\de\hdm\projectplan\client\editor\NewProjectView$createProjectCallback.class C:\Users\Sarah Weimer\workspace\ProjectplanTest\war\WEB-INF\classes\de\hdm\projectplan\client\editor\NewProjectView$1.class C:\Users\Sarah Weimer\workspace\ProjectplanTest\war\WEB-INF\classes\de\hdm\projectplan\client\editor\NewProjectView$2.class -enhancerVersion v2
+java_class_path (initial): C:\Users\Sarah Weimer\workspace\ProjectplanTest\test-classes;C:\Users\Sarah Weimer\workspace\ProjectplanTest\war\WEB-INF\classes;C:\Users\Sarah Weimer\.p2\pool\plugins\com.google.appengine.eclipse.sdkbundle_1.9.34\appengine-java-sdk-1.9.34\lib\shared\appengine-local-runtime-shared.jar;C:\Users\Sarah Weimer\.p2\pool\plugins\com.google.appengine.eclipse.sdkbundle_1.9.34\appengine-java-sdk-1.9.34\lib\shared\el-api.jar;C:\Users\Sarah Weimer\.p2\pool\plugins\com.google.appengine.eclipse.sdkbundle_1.9.34\appengine-java-sdk-1.9.34\lib\shared\jsp\repackaged-appengine-ant-1.7.1.jar;C:\Users\Sarah Weimer\.p2\pool\plugins\com.google.appengine.eclipse.sdkbundle_1.9.34\appengine-java-sdk-1.9.34\lib\shared\jsp\repackaged-appengine-ant-launcher-1.7.1.jar;C:\Users\Sarah Weimer\.p2\pool\plugins\com.google.appengine.eclipse.sdkbundle_1.9.34\appengine-java-sdk-1.9.34\lib\shared\jsp\repackaged-appengine-jasper-6.0.29.jar;C:\Users\Sarah Weimer\.p2\pool\plugins\com.google.appengine.eclipse.sdkbundle_1.9.34\appengine-java-sdk-1.9.34\lib\shared\jsp\repackaged-appengine-jasper-el-6.0.29.jar;C:\Users\Sarah Weimer\.p2\pool\plugins\com.google.appengine.eclipse.sdkbundle_1.9.34\appengine-java-sdk-1.9.34\lib\shared\jsp\repackaged-appengine-tomcat-juli-6.0.29.jar;C:\Users\Sarah Weimer\.p2\pool\plugins\com.google.appengine.eclipse.sdkbundle_1.9.34\appengine-java-sdk-1.9.34\lib\shared\jsp-api.jar;C:\Users\Sarah Weimer\.p2\pool\plugins\com.google.appengine.eclipse.sdkbundle_1.9.34\appengine-java-sdk-1.9.34\lib\shared\servlet-api.jar;C:\Users\Sarah Weimer\.p2\pool\plugins\com.google.appengine.eclipse.sdkbundle_1.9.34\appengine-java-sdk-1.9.34\lib\appengine-tools-api.jar;C:\Users\Sarah Weimer\.p2\pool\plugins\com.google.appengine.eclipse.sdkbundle_1.9.34\appengine-java-sdk-1.9.34\lib\opt\user\appengine-api-labs\v1\appengine-api-labs.jar;C:\Users\Sarah Weimer\.p2\pool\plugins\com.google.appengine.eclipse.sdkbundle_1.9.34\appengine-java-sdk-1.9.34\lib\opt\user\appengine-endp
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files (x86)\Skype\Phone\
+USERNAME=Sarah Weimer
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 69 Stepping 1, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 10586 (10.0.10586.0)
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 69 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2
+
+Memory: 4k page, physical 3842328k(666020k free), swap 15376664k(2028k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.111-b14) for windows-amd64 JRE (1.8.0_111-b14), built on Sep 22 2016 19:24:05 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Tue May 09 20:50:32 2017
+elapsed time: 0 seconds (0d 0h 0m 0s)
+

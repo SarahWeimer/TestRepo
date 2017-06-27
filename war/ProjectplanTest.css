@@ -1,0 +1,267 @@
+/** Add css rules here for your application. */
+
+div#TopLevelFrame{
+	background: powderblue; /* For browsers that do not support gradients */
+  	background: -webkit-linear-gradient(powderblue); /* For Safari 5.1 to 6.0 */
+  	background: -o-linear-gradient(powderblue); /* For Opera 11.1 to 12.0 */
+  	background: -moz-linear-gradient(powderblue); /* For Firefox 3.6 to 15 */
+  	background: linear-gradient(powderblue); /* Standard syntax */
+  	background-color: #B0E0E6;
+}
+
+/** Details Ueberschrift */
+.headline {
+	font-size: 18pt;
+	color: #38373e;
+}
+
+.simpletext {
+	font-size: 18pt;
+	color: red;
+}
+
+/** textueller inhalt */
+.textLabel {
+	margin-top: 5pt;
+	color:  #38373e;
+	margin-left: 5pt;
+	margin-right: 5pt;
+}
+
+/** ueberschrift von Tabelle */
+.textLabelHeadline {
+	margin-top: 5pt;
+	color:  #38373e;
+	margin-left: 5pt;
+	margin-right: 5pt;
+	font-size: 12pt;
+}
+
+/** Beschriftung des Labels */
+.labelName {
+	font-size: 11pt;
+	color:  	#38373e;
+	margin: 5pt;
+}
+
+/** Beschriftung des Labels ZENTRIERT*/
+.labelNameZen {
+	font-size: 11pt;
+	color:  	#38373e;
+	margin: 5pt;
+	text-align: center;
+}
+
+/** Inhalt des beschrifteten Labels */
+.labelNameInhalt {
+	font-size: 12pt;
+	color:  	#38373e;
+	margin-top: 5pt;
+	margin-left: 10pt;
+	text-align: center;
+}
+
+/** allgemeine Buttons der Navigation */
+.button {
+ 	background-color: #38373e;
+	color: #ffffff;
+	border:0px;
+	font-weight: bold;
+	height: 2em;
+	width: 10em;
+	margin: 10px 10px 10px;
+}
+
+/** Auslogg Button mit extra Abstand von oben */
+.button2 {
+ 	background-color:#808080;
+	color: #ffffff;
+	border:0px;
+	font-weight: bold;
+	height: 2em;
+	width: 10em;
+	margin: 10px 10px 10px;
+	margin-top: 29em;
+}
+
+/** Report Button */
+.button3 {
+ 	background-color:#808080;
+	color: #ffffff;
+	border:0px;
+	font-weight: bold;
+	height: 2em;
+	width: 10em;
+	margin: 10px 10px 10px;
+}
+
+.button4 {
+ 	background-color: #38373e;
+	color: #ffffff;
+	border:0px;
+	font-weight: bold;
+	height: 2em;
+	width: 10em;
+	margin: 10px 10px 10px; 
+	margin-left: 770px;
+	margin-top: 150px;
+}
+
+.button5 {
+ 	background-color: #38373e;
+	color: #ffffff;
+	border:0px;
+	font-weight: bold;
+	height: 2em;
+	width: 10em;
+	margin: 10px 10px 10px; 
+	margin-left: 620px;
+}
+
+.buttonAdd {
+	width: 100%;
+	height: 40px;
+	margin: 5px;
+	padding: 10px 10px 10px;
+	box-sizing: border-box; 
+	background-color: #B0C4DE;
+	border: 1px solid black;
+	border-color: #777777;
+}
+
+
+
+/** Textarea Beschreibung Style */
+.textarea {
+	margin: 5px;
+	margin-left: -3px;
+	height: 8em;
+	width: 55.7em;
+	background-color: #f8f8f8;
+	border: 1px solid black;
+	border-color: #777777;
+}
+
+/** Textbox klein Style */
+.textbox {
+	width: 100%;
+	height: 40px;
+	margin: 5px;
+	padding: 10px 10px 10px;
+	box-sizing: border-box; 
+	background-color: #f8f8f8;
+	/*resize: none;*/
+	border: 1px solid black;
+	border-color: #777777;
+}
+
+/** Abstand + rahmen fuer datum box */
+.datebox {
+	margin: 5px;
+	border: 1px solid black;
+	border-color: #777777;
+	background-color: #f8f8f8;
+}
+
+/** Style f¸r Tabellen */
+.table {
+	margin: 5px;
+	border: 1px solid black;
+	border-color: #777777;
+	background-color: #f8f8f8;
+}
+
+.cellTable {
+	color: #085deb;
+	cursor: pointer;
+	font-weight: 900 !important;
+	font-size: 13px;
+}
+
+.userColumn{
+	color: #085deb;
+	cursor: pointer;
+	font-weight: 900 !important;
+	font-size: 13px;
+}
+
+
+/** Most GWT widgets already have a style name defined */
+.gwt-DialogBox {
+  width: 400px;
+}
+
+.dialogVPanel {
+  margin: 5px;
+}
+
+.serverResponseLabelError {
+  color: red;
+}
+
+/** Set ids using widget.getElement().setId("idOfElement") */
+#closeButton {
+  margin: 15px 6px 6px;
+}
+
+
+/** Seitenstruktur -> mittels DIV */
+
+div#Header {
+  font-size: 50pt;
+  font-weight: bold;
+  color: #777777;
+  text-align: center;
+ 
+
+/* 	height: 100px;
+	text-align: center;
+	color:  #4682B4;
+	font-weight: bold;
+	font-size: 12pt -> Schriftgrˆﬂe;
+	opacity: 0.5; -> Deckkraft
+	margin -> Auﬂenabstand*/
+}
+
+
+div#Navigator {
+	margin-left: 15px;
+	width: 50px;
+	height: 30px;
+	padding: 1em 1em;
+}
+
+div#Details {
+	margin-left: 200px;
+	margin-right: 200px;
+	margin-top: -33px;
+	margin-bottom: 40px;
+	height: 600px;
+	padding: 1em 1em;
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black; 
+	border-color: #777777;
+	background-color: #ffffff;
+	opacity: 0.9;
+	color: #777777;
+	/* font-weight: bold; */
+}
+
+
+div#Trailer {
+	clear: both;
+	/*padding: 0;*/
+	border: 1px solid powderblue;
+    background-color: powderblue;
+    height: 50px;
+	text-align: right;
+	margin-right: 200px;
+	color: #777777;
+ /* bottom: 0;
+    width: 100%; */
+}
+
+
+
